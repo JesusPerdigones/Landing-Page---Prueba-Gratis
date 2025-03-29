@@ -14,7 +14,7 @@
 
 ## 📖 Descripción del Proyecto
 
-Este proyecto es una landing page moderna y responsive desarrollada con Angular 17, diseñada para ofrecer una prueba gratuita de servicios SAAS para la gestión notarial con IA. La página está optimizada para conversión y cuenta con una interfaz de usuario intuitiva y atractiva.
+Este proyecto es una landing page moderna y responsive desarrollada con Angular 17, diseñada para ofrecer una prueba gratuita de servicios SAAS para la gestión con IA. La página está optimizada para conversión y cuenta con una interfaz de usuario intuitiva y atractiva.
 
 ## ✨ Características Principales
 
