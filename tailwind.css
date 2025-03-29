@@ -1,0 +1,185 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+selector {
+  font-size: valor;
+}
+
+:root {
+  --body-l-font-family: 'Roboto', Helvetica;
+  --body-l-font-size: 18px;
+  --body-l-font-style: normal;
+  --body-l-font-weight: 400;
+  --body-l-letter-spacing: 0px;
+  --body-l-line-height: 140%;
+  --body-m-font-family: 'Roboto', Helvetica;
+  --body-m-font-size: 16px;
+  --body-m-font-style: normal;
+  --body-m-font-weight: 400;
+  --body-m-letter-spacing: 0px;
+  --body-m-line-height: 140%;
+  --body-s-font-family: 'Roboto', Helvetica;
+  --body-s-font-size: 14px;
+  --body-s-font-style: normal;
+  --body-s-font-weight: 400;
+  --body-s-letter-spacing: 0px;
+  --body-s-line-height: 140%;
+  --body-XS-font-family: 'Roboto', Helvetica;
+  --body-XS-font-size: 12px;
+  --body-XS-font-style: normal;
+  --body-XS-font-weight: 400;
+  --body-XS-letter-spacing: 0px;
+  --body-XS-line-height: 140%;
+  --button-l-font-family: 'Roboto', Helvetica;
+  --button-l-font-size: 20px;
+  --button-l-font-style: normal;
+  --button-l-font-weight: 500;
+  --button-l-letter-spacing: 0.5px;
+  --button-l-line-height: 100%;
+  --button-m-font-family: 'Roboto', Helvetica;
+  --button-m-font-size: 16px;
+  --button-m-font-style: normal;
+  --button-m-font-weight: 500;
+  --button-m-letter-spacing: 0.5px;
+  --button-m-line-height: 100%;
+  --coolgray-10: rgba(242, 244, 248, 1);
+  --coolgray-20: rgba(221, 225, 230, 1);
+  --coolgray-30: rgba(193, 199, 205, 1);
+  --coolgray-60: rgba(105, 112, 119, 1);
+  --coolgray-70: rgba(77, 83, 88, 1);
+  --coolgray-90: rgba(33, 39, 42, 1);
+  --defaultalert: rgba(218, 30, 40, 1);
+  --defaultwhite: rgba(255, 255, 255, 1);
+  --heading-1-font-family: 'Roboto', Helvetica;
+  --heading-1-font-size: 54px;
+  --heading-1-font-style: normal;
+  --heading-1-font-weight: 700;
+  --heading-1-letter-spacing: 0px;
+  --heading-1-line-height: 110%;
+  --heading-2-font-family: 'Roboto', Helvetica;
+  --heading-2-font-size: 42px;
+  --heading-2-font-style: normal;
+  --heading-2-font-weight: 700;
+  --heading-2-letter-spacing: 0px;
+  --heading-2-line-height: 110%;
+  --heading-4-font-family: 'Roboto', Helvetica;
+  --heading-4-font-size: 24px;
+  --heading-4-font-style: normal;
+  --heading-4-font-weight: 700;
+  --heading-4-letter-spacing: 0px;
+  --heading-4-line-height: 110%;
+  --heading-5-font-family: 'Roboto', Helvetica;
+  --heading-5-font-size: 20px;
+  --heading-5-font-style: normal;
+  --heading-5-font-weight: 700;
+  --heading-5-letter-spacing: 0px;
+  --heading-5-line-height: 110%;
+  --other-caption-font-family: 'Roboto', Helvetica;
+  --other-caption-font-size: 20px;
+  --other-caption-font-style: normal;
+  --other-caption-font-weight: 700;
+  --other-caption-letter-spacing: 1px;
+  --other-caption-line-height: 100%;
+  --other-menu-m-font-family: 'Roboto', Helvetica;
+  --other-menu-m-font-size: 16px;
+  --other-menu-m-font-style: normal;
+  --other-menu-m-font-weight: 500;
+  --other-menu-m-letter-spacing: 0px;
+  --other-menu-m-line-height: 100%;
+  --primary-60: rgba(15, 98, 254, 1);
+  --primary-90: rgba(0, 29, 108, 1);
+  --subtitle-m-font-family: 'Roboto', Helvetica;
+  --subtitle-m-font-size: 16px;
+  --subtitle-m-font-style: normal;
+  --subtitle-m-font-weight: 500;
+  --subtitle-m-letter-spacing: 0px;
+  --subtitle-m-line-height: 110%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}

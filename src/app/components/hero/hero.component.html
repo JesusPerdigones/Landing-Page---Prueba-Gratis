@@ -1,0 +1,98 @@
+<section id="home" class="pt-24 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <!-- Background Animation -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-60/5 to-primary-90/5">
+    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="w-full md:w-1/2" @fadeInLeft>
+        <!-- Highlight Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-60/10 text-primary-60 mb-6">
+          <span class="font-medium tracking-wider text-sm flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            Prueba gratis 100%
+          </span>
+        </div>
+
+        <!-- Main Content -->
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 font-heading-1 text-coolgray-90 leading-tight">
+          Comience hoy su <span class="text-primary-60">prueba gratis</span>
+        </h1>
+
+        <p class="text-xl mb-8 text-coolgray-70 leading-relaxed">
+          Optimice su trabajo con nuestro servicio SAAS integral.<br />Cree contenido y elabore índices notariales con IA de forma eficiente.
+          <span class="font-medium">Sin compromiso.</span>
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 items-center">
+          <a href="#contact" class="group relative px-8 py-4 bg-primary-60 text-white rounded-full text-lg font-medium transition-all duration-300 hover:bg-primary-90 hover:shadow-lg hover:shadow-primary-60/20 active:transform active:scale-95">
+            <span class="flex items-center gap-2">
+              <span>Comenzar prueba gratis</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="transform transition-transform duration-300 group-hover:translate-x-1">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Features List -->
+          <div class="flex flex-col gap-2 text-coolgray-70">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Prueba de 14 días</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Sin tarjeta de crédito</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="w-full md:w-1/2" @fadeInRight>
+        <div class="relative">
+          <!-- Decorative Elements -->
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-60 to-primary-90 rounded-3xl transform rotate-6 blur-xl opacity-20"></div>
+          <div class="absolute -inset-4 bg-white/50 backdrop-blur-xl rounded-3xl transform -rotate-3"></div>
+
+          <!-- Main Image -->
+          <img src="https://source.unsplash.com/random/800x600?office,modern" alt="Modern Office Space" class="relative rounded-3xl shadow-2xl object-cover w-full aspect-[4/3] transform transition-transform duration-500 hover:scale-105"/>
+
+          <!-- Floating Elements -->
+          <div class="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-60" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+              </svg>
+              <div>
+                <div class="text-sm font-medium text-coolgray-90">+100</div>
+                <div class="text-xs text-coolgray-70">Usuarios activos</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <div class="text-sm font-medium text-coolgray-90">99%</div>
+                <div class="text-xs text-coolgray-70">Satisfacción</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

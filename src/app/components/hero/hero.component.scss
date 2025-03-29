@@ -1,0 +1,39 @@
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(15, 98, 254, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 98, 254, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+:host {
+  display: block;
+  
+  ::ng-deep {
+    .animate-float {
+      animation: float 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Pulse Animation */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

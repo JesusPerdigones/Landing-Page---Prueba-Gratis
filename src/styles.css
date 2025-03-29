@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-l-font-family: 'Roboto', Helvetica;
+  --body-l-font-size: 18px;
+  --body-l-font-style: normal;
+  --body-l-font-weight: 400;
+  --body-l-letter-spacing: 0px;
+  --body-l-line-height: 140%;
+  --coolgray-10: rgba(242, 244, 248, 1);
+  --coolgray-20: rgba(221, 225, 230, 1);
+  --coolgray-30: rgba(193, 199, 205, 1);
+  --coolgray-60: rgba(105, 112, 119, 1);
+  --coolgray-70: rgba(77, 83, 88, 1);
+  --coolgray-90: rgba(33, 39, 42, 1);
+  --defaultalert: rgba(218, 30, 40, 1);
+  --defaultwhite: rgba(255, 255, 255, 1);
+  --primary-60: rgba(15, 98, 254, 1);
+  --primary-90: rgba(0, 29, 108, 1);
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* Accounts for fixed header */
+}
+
+body {
+  font-family: var(--body-l-font-family);
+  margin: 0;
+  padding: 0;
+  @apply bg-background text-foreground;
+}

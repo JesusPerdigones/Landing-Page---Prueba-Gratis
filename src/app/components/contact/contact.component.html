@@ -1,0 +1,519 @@
+<section id="contact" class="section-text" @fadeInOut>
+  <div class="text-container">
+    <div class="top">
+      <h2 class="text-primary-60">Inicie hoy mismo su prueba gratis.</h2>
+      <p class="secondary-headline">
+        Acceda al formulario y responda algunas preguntas
+      </p>
+      &nbsp;
+      <p>
+        Nuestro equipo estará en contacto para ayudarle a sacar el máximo
+        partido de su prueba.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" @fadeInOut>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <div class="form-grid">
+      <!-- Name Field -->
+      <div class="form-field" [class.focused]="focusedField === 'nombre'">
+        <div class="label-field-container">
+          <label class="field-label">
+            <span class="label-text">Nombre</span>
+            <span class="required-star">*</span>
+          </label>
+          <div
+            class="input-container"
+            [class.error]="
+              contactForm.get('nombre')?.touched &&
+              contactForm.get('nombre')?.invalid
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="field-icon"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-dasharray="28"
+                stroke-dashoffset="28"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path d="M4 21v-1c0 -3.31 2.69 -6 6 -6h4c3.31 0 6 2.69 6 6v1">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="0.4s"
+                    values="28;0"
+                  />
+                </path>
+                <path
+                  d="M12 11c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4Z"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.4s"
+                    dur="0.4s"
+                    values="28;0"
+                  />
+                </path>
+              </g>
+            </svg>
+            <input
+              type="text"
+              formControlName="nombre"
+              placeholder="Ingrese su nombre"
+              class="form-input"
+              (focus)="onFieldFocus('nombre')"
+              (blur)="onFieldBlur('nombre')"
+            />
+          </div>
+          <span class="error-message" *ngIf="getFieldError('nombre')">{{
+            getFieldError('nombre')
+          }}</span>
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-field" [class.focused]="focusedField === 'email'">
+        <div class="label-field-container">
+          <label class="field-label">
+            <span class="label-text">Email</span>
+            <span class="required-star">*</span>
+          </label>
+          <div
+            class="input-container"
+            [class.error]="
+              contactForm.get('email')?.touched &&
+              contactForm.get('email')?.invalid
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="field-icon"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-dasharray="88"
+                stroke-dashoffset="88"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 12c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4v1.5c0 1.38 1.12 2.5 2.5 2.5c1.38 0 2.5 -1.12 2.5 -2.5v-1.5c0 -4.97 -4.03 -9 -9 -9c-4.97 0 -9 4.03 -9 9c0 4.97 4.03 9 9 9h4"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="1s"
+                  values="88;0"
+                />
+              </path>
+            </svg>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Ingrese su email"
+              class="form-input"
+              (focus)="onFieldFocus('email')"
+              (blur)="onFieldBlur('email')"
+            />
+          </div>
+          <span class="error-message" *ngIf="getFieldError('email')">{{
+            getFieldError('email')
+          }}</span>
+        </div>
+      </div>
+
+      <!-- Phone Field -->
+      <div class="form-field" [class.focused]="focusedField === 'telefono'">
+        <div class="label-field-container">
+          <label class="field-label">
+            <span class="label-text">Teléfono</span>
+            <span class="required-star">*</span>
+          </label>
+          <div
+            class="input-container"
+            [class.error]="
+              contactForm.get('telefono')?.touched &&
+              contactForm.get('telefono')?.invalid
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="field-icon"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-dasharray="64"
+                stroke-dashoffset="64"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.6s"
+                  values="64;0"
+                />
+              </path>
+            </svg>
+            <input
+              type="tel"
+              formControlName="telefono"
+              placeholder="+34 600 000 000"
+              class="form-input"
+              (focus)="onFieldFocus('telefono')"
+              (blur)="onFieldBlur('telefono')"
+            />
+          </div>
+          <span class="error-message" *ngIf="getFieldError('telefono')">{{
+            getFieldError('telefono')
+          }}</span>
+        </div>
+      </div>
+
+      <!-- Position Field -->
+      <div class="form-field" [class.focused]="focusedField === 'cargo'">
+        <div class="label-field-container">
+          <label class="field-label">
+            <span class="label-text">Cargo</span>
+            <span class="required-star">*</span>
+          </label>
+          <div
+            class="input-container"
+            [class.error]="
+              contactForm.get('cargo')?.touched &&
+              contactForm.get('cargo')?.invalid
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="#697178"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  stroke-dasharray="64"
+                  stroke-dashoffset="64"
+                  d="M9 7h11c0.55 0 1 0.45 1 1v11c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-11c0 -0.55 0.45 -1 1 -1Z"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="0.6s"
+                    values="64;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="16"
+                  stroke-dashoffset="16"
+                  d="M9 7v-3c0 -0.55 0.45 -1 1 -1h4c0.55 0 1 0.45 1 1v3"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.7s"
+                    dur="0.2s"
+                    values="16;0"
+                  />
+                </path>
+              </g>
+            </svg>
+
+            <input
+              type="text"
+              formControlName="cargo"
+              placeholder="Ingrese su cargo"
+              class="form-input"
+              (focus)="onFieldFocus('cargo')"
+              (blur)="onFieldBlur('cargo')"
+            />
+          </div>
+          <span class="error-message" *ngIf="getFieldError('cargo')">{{
+            getFieldError('cargo')
+          }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment Field -->
+    <div class="form-field" [class.focused]="focusedField === 'comentario'">
+      <div class="label-field-container">
+        <label class="field-label">
+          <span class="label-text">Comentario</span>
+          <span
+            class="char-counter"
+            [class.near-limit]="getRemainingChars() < 50"
+          >
+            {{ getRemainingChars() }} caracteres restantes
+          </span>
+        </label>
+        <div
+          class="input-container"
+          [class.error]="
+            contactForm.get('comentario')?.touched &&
+            contactForm.get('comentario')?.invalid
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="field-icon"
+          >
+            <path
+              fill="currentColor"
+              fill-opacity="0"
+              d="M5 15.5c1 1 2.5 2 4 2.5c-0.71 -0.24 -1.43 -0.59 -2.09 -1c-0.72 -0.45 -1.39 -0.98 -1.91 -1.5Z"
+            >
+              <animate
+                fill="freeze"
+                attributeName="d"
+                begin="0.6s"
+                dur="0.2s"
+                values="M5 15.5c1 1 2.5 2 4 2.5c-0.71 -0.24 -1.43 -0.59 -2.09 -1c-0.72 -0.45 -1.39 -0.98 -1.91 -1.5Z;M5 15.5c1 1 2.5 2 4 2.5c-2 2 -5 3 -7 3c2 -2 3 -3.5 3 -5.5Z"
+              />
+              <set
+                fill="freeze"
+                attributeName="fill-opacity"
+                begin="0.6s"
+                to="1"
+              />
+            </path>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                stroke-dasharray="56"
+                stroke-dashoffset="56"
+                d="M7 16.82c-2.41 -1.25 -4 -3.39 -4 -5.82c0 -3.87 4.03 -7 9 -7c4.97 0 9 3.13 9 7c0 3.87 -4.03 7 -9 7c-1.85 0 -3.57 -0.43 -5 -1.18Z"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.6s"
+                  values="56;0"
+                />
+              </path>
+              <path stroke-dasharray="2" stroke-dashoffset="2" d="M8 11h0.01">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.9s"
+                  dur="0.2s"
+                  values="2;0"
+                />
+              </path>
+              <path stroke-dasharray="2" stroke-dashoffset="2" d="M12 11h0.01">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="1.2s"
+                  dur="0.2s"
+                  values="2;0"
+                />
+              </path>
+              <path stroke-dasharray="2" stroke-dashoffset="2" d="M16 11h0.01">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="1.5s"
+                  dur="0.2s"
+                  values="2;0"
+                />
+              </path>
+            </g>
+          </svg>
+          <textarea
+            formControlName="comentario"
+            placeholder="Escriba su comentario (opcional)"
+            class="form-input textarea"
+            rows="3"
+            (focus)="onFieldFocus('comentario')"
+            (blur)="onFieldBlur('comentario')"
+          ></textarea>
+        </div>
+        <span class="error-message" *ngIf="getFieldError('comentario')">{{
+          getFieldError('comentario')
+        }}</span>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="formProgress"></div>
+      </div>
+      <span class="progress-text">{{ formProgress }}% completado</span>
+    </div>
+    <p>
+      Uniofy valora su privacidad.<BR />Para conocer más detalles, visite
+      nuestras políticas de privacidad.
+    </p>
+
+    <!-- Communications Consent Checkbox -->
+    <div class="consent-checkbox">
+      <label class="checkbox-container">
+        <input
+          type="checkbox"
+          formControlName="aceptaComunicaciones"
+          class="checkbox-input"
+        />
+        <span class="checkbox-label">
+           Sí, acepto recibir comunicaciones sobre los servicios y eventos de Uniofy.<br>Pudiendo cancelar la suscripción en cualquier momento.
+        </span>
+      </label>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="buttons-group">
+      <button
+        type="submit"
+        class="submit-button"
+        [@buttonState]="getButtonState()"
+        [disabled]="!contactForm.valid || isSubmitting"
+      >
+        <div class="button-content">
+          <svg
+            *ngIf="!isSubmitting"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="button-icon"
+          >
+            <g
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                stroke-dasharray="20"
+                stroke-dashoffset="20"
+                d="M21 5l-2.5 15M21 5l-12 8.5"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.4s"
+                  values="20;0"
+                />
+              </path>
+              <path
+                stroke-dasharray="24"
+                stroke-dashoffset="24"
+                d="M21 5l-19 7.5"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.4s"
+                  values="24;0"
+                />
+              </path>
+              <path
+                stroke-dasharray="14"
+                stroke-dashoffset="14"
+                d="M18.5 20l-9.5 -6.5"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.4s"
+                  dur="0.3s"
+                  values="14;0"
+                />
+              </path>
+              <path
+                stroke-dasharray="10"
+                stroke-dashoffset="10"
+                d="M2 12.5l7 1"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.4s"
+                  dur="0.3s"
+                  values="10;0"
+                />
+              </path>
+              <path
+                stroke-dasharray="8"
+                stroke-dashoffset="8"
+                d="M12 16l-3 3M9 13.5l0 5.5"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.7s"
+                  dur="0.3s"
+                  values="8;0"
+                />
+              </path>
+            </g>
+          </svg>
+          <div class="spinner" *ngIf="isSubmitting"></div>
+          <span class="button-text">{{
+            isSubmitting ? 'Enviando...' : 'Enviar formulario'
+          }}</span>
+        </div>
+      </button>
+    </div>
+  </form>
+
+  <!-- Error Message -->
+  <div class="error-message-container" *ngIf="showError" @fadeInOut>
+    <div class="error-content">
+      <i class="error-icon">❌</i>
+      <h3>Error al enviar el mensaje</h3>
+      <p>
+        Lo sentimos, ha ocurrido un error al enviar el formulario.<br />
+        Por favor, inténtelo de nuevo más tarde.
+      </p>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div class="success-message" *ngIf="showSuccess" @fadeInOut>
+    <div class="success-content">
+      <i class="success-icon">✅</i>
+      <h3>¡Mensaje enviado!</h3>
+      <p>
+        Gracias por contactarnos.<br />Te responderemos tan pronto como nos sea
+        posible.
+      </p>
+    </div>
+  </div>
+</section>

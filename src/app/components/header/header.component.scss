@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.nav-link {
+  color: var(--coolgray-90);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--primary-60);
+  }
+}
