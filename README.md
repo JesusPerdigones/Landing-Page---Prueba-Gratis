@@ -1,4 +1,4 @@
-# Landing Page - Prueba Gratis Uniofy
+# Landing Page - Prueba Gratis
 
 <div align="center">
 
