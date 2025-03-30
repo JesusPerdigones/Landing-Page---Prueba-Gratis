@@ -170,7 +170,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 - **Desarrollo Frontend y Diseño UI/UX**: [Jesús Perdigones]
 
 ## 📞 Contacto
-
+Para preguntas y soporte, por favor contacta a través de:
 - Email: [jsperdigones@gmail.com]
 
 ## 🙏 Agradecimientos
