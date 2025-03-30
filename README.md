@@ -165,6 +165,13 @@ src/
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 💬 Soporte
+## 👥 Equipo
 
-Para soporte o consultas, por favor crear un issue en el repositorio o contactar con el equipo de desarrollo.
+- **Desarrollo Frontend y Diseño UI/UX**: [Jesús Perdigones]
+
+## 📞 Contacto
+
+- Email: [jsperdigones@gmail.com]
+
+## 🙏 Agradecimientos
+🚀 ¡Gracias, GitHub! Por ser nuestro santuario de commits, pull requests y bugs que juramos arreglar "después". Sin ti, nuestras ideas estarían en un USB perdido en el cajón. ❤️🙌 #CodeOn
