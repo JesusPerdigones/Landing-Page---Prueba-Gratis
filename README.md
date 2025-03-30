@@ -76,7 +76,7 @@ Proyecto de Landing-page moderna y responsive diseñada para ofrecer una prueba 
 - Optimización de rendimiento
 - Accesibilidad implementada
 
-## 📋 Requisitos Previos
+## 💻 Requisitos Previos
 
 - Node.js (versión recomendada: 18.x o superior)
 - NPM (incluido con Node.js)
@@ -114,7 +114,7 @@ npm run dev
 - `npm run e2e`: Ejecuta tests end-to-end
 - `npm run lint`: Ejecuta el linter
 
-## 📁 Estructura del Proyecto
+## 📦 Estructura del Proyecto
 
 ```
 src/
@@ -134,7 +134,7 @@ src/
 └── styles/
 ```
 
-## ⚡ Optimizaciones
+## ✨ Optimizaciones
 
 - Lazy loading de imágenes
 - Preload de fuentes
@@ -154,7 +154,7 @@ src/
 - Diseño responsive
 
 ## 🤝 Contribución
-
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 1. Fork del repositorio
 2. Crear rama feature (`git checkout -b feature/NuevaCaracteristica`)
 3. Commit cambios (`git commit -am 'Añadir nueva característica'`)
